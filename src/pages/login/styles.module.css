@@ -1,0 +1,80 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardContainer {
+  height: 80vh;
+  display: flex;
+  border-radius: 10px;
+  width: 80vw;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 5px 5px 10px rgba(173, 173, 173);
+}
+
+.cardContainer_left {
+  width: 60%;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cardContainer_right {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: #007bff;;
+}
+
+.heading_left {
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputField {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #ccc;
+}
+
+.inputRow {
+  display: flex;
+  gap: 1rem;
+}
+
+.inputContainer {
+  max-width: 400px;
+}
+
+.btn {
+  background-color: rgba(0, 0, 0, 0.347);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.heading_right {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  justify-content: center;  
+  align-items: center;
+  text-align: center;
+}

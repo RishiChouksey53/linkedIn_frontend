@@ -1,0 +1,257 @@
+.scrollComponent {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.createPostContainer {
+  width: 100%;
+  border-radius: 10px;
+  padding-inline: 0.5rem;
+  display: flex;
+  padding-block: 1rem;
+  align-items: center;
+  position: relative;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1.5rem;
+  height: 10rem;
+}
+
+.createPostContainer > label > svg {
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 50%;
+  background-color: #007bff;
+  color: white;
+}
+
+.createPostContainer > textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #f0f0f0;
+  font-size: 1rem;
+  margin-inline: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  outline: none;
+  height: 6rem;
+}
+
+.createPostContainer > img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+}
+
+.createPostButton {
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  bottom: -20px;
+}
+
+.postContainer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-inline: 1rem;
+  justify-content: center;
+  overflow: auto;
+}
+.postCard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  margin-inline: 1rem;
+}
+.post {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  width: 100%;
+  height: fit-content;
+  background-color: white;
+}
+
+.postUser {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.postUser > img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  margin: 0.5rem;
+}
+
+.postUserInfo {
+  padding-left: 1rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  height: 1rem;
+}
+
+.deletePostIcon {
+  width: 2rem;
+  padding-right: 0.5rem;
+  padding-top: 0.5rem;
+  color: red;
+  cursor: pointer;
+}
+
+.deletePostIcon:hover {
+  color: rgba(255, 0, 0, 0.5);
+}
+
+.postBody {
+  padding: 1rem;
+  font-size: 1.125rem;
+}
+.postMedia > img {
+  width: 100%;
+  background-color: #f0f0f0;
+}
+
+.postDate {
+  text-align: end;
+  font-size: 0.65rem;
+  padding-right: 0.5rem;
+}
+
+.postActions {
+  display: flex;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.postActionsIcons > svg {
+  width: 1.45rem;
+  cursor: pointer;
+}
+
+.postActionsIcons > svg:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.commentsContainer {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: 2;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.allCommentsContainer {
+  width: 100%;
+  max-width: 500px;
+  height: 90vh;
+  background-color: whitesmoke;
+  border-radius: 10px;
+  position: relative;
+}
+
+.postCommentsContainer {
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 10%;
+  border-end-end-radius: 10px;
+  border-end-start-radius: 10px;
+  background-color: white;
+}
+
+.postCommentsContainer > input {
+  width: 100%;
+  outline: none;
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #f0f0f0;
+  font-size: 1rem;
+  margin-inline: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.postCommentsContainer > div {
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  line-height: 1px;
+}
+
+.commentCard {
+  height: 90%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem;
+  padding: 1.125rem;
+}
+
+.commentCardBody {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.214);
+  width: 100%;
+}
+
+.commentUser {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.commentUser > img {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  margin: 0.5rem;
+}
+
+.commentBody {
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.commentBody > svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: black;
+  cursor: pointer;
+}
+
+.commentBody > svg:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
