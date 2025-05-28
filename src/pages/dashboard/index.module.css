@@ -2,17 +2,18 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-top: 1rem;
 }
 .createPostContainer {
   width: 100%;
   border-radius: 10px;
-  padding-inline: 0.5rem;
   display: flex;
   padding-block: 1rem;
   align-items: center;
   position: relative;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.25);
   margin-bottom: 1.5rem;
+  padding: 0.5rem;
   height: 10rem;
 }
 
@@ -51,8 +52,8 @@
   border-radius: 5px;
   cursor: pointer;
   position: absolute;
-  right: 10px;
-  bottom: -20px;
+  right: 15px;
+  bottom: -10px;
 }
 
 .postContainer {
@@ -165,7 +166,7 @@
 .allCommentsContainer {
   width: 100%;
   max-width: 500px;
-  height: 90vh;
+  height: 70vh;
   background-color: whitesmoke;
   border-radius: 10px;
   position: relative;
@@ -203,7 +204,6 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  line-height: 1px;
 }
 
 .commentCard {
@@ -254,4 +254,14 @@
 
 .commentBody > svg:hover {
   color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 600px) {
+  .postContainer {
+    padding-inline: 0;
+    margin-inline: 0;
+  }
+  .allCommentsContainer {
+    margin: .5rem;
+  }
 }

@@ -1,3 +1,5 @@
+import { all } from "axios";
+
 const { createSlice } = require("@reduxjs/toolkit");
 const {
   getAllPosts,

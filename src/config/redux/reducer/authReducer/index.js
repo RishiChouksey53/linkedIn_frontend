@@ -2,6 +2,8 @@ import { createSlice } from "@reduxjs/toolkit";
 import {
   getAboutUser,
   getAllUsersProfile,
+  getConnectionRequestsReceived,
+  getConnectionRequestsSend,
   loginUser,
   registerUser,
 } from "../../action/authAction";
@@ -103,6 +105,19 @@ const authSlice = createSlice({
           (state.isSuccess = false),
           (state.isError = true),
           (state.message = action?.payload?.message || "Fetching users failed");
+      })
+      //whome i have send me -> others
+      .addCase(getConnectionRequestsSend.fulfilled, (state, action) => {
+        state.connections = action.payload;
+      })
+      .addCase(getConnectionRequestsSend.rejected, (state, action) => {
+        state.message = action?.payload || "No Connection Requests";
+      })
+      .addCase(getConnectionRequestsReceived.fulfilled, (state, action) => {
+        state.connectionRequest = action.payload;
+      })
+      .addCase(getConnectionRequestsReceived.rejected, (state, action) => {
+        state.message = action?.payload || "No Connection Requests";
       });
   },
 });
