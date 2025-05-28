@@ -3,6 +3,7 @@
   flex-direction: column;
   width: 100%;
   margin-top: 1rem;
+
 }
 .createPostContainer {
   width: 100%;
@@ -61,8 +62,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  margin-inline: 1rem;
   justify-content: center;
+  align-items: center;
   overflow: auto;
 }
 .postCard {
@@ -260,8 +261,10 @@
   .postContainer {
     padding-inline: 0;
     margin-inline: 0;
+    margin-bottom: 3rem;
   }
   .allCommentsContainer {
     margin: .5rem;
   }
+
 }

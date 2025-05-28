@@ -96,7 +96,7 @@ export default function MyConnections() {
                 </div>
               </div>
             ))}
-          <h2 className={styles.heading}>My Connections.</h2>
+          <h2 className={styles.heading}>My Connections</h2>
           {authState.connectionRequest
             .filter((connection) => connection.status_accepted !== null)
             .map((user) => (
