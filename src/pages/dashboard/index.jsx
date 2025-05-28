@@ -147,7 +147,11 @@ const Dashboard = () => {
                 <div key={post._id} className={styles.postCard}>
                   <div className={styles.post}>
                     <div className={styles.postUser}>
-                      <img src={`${BASE_URL}/${post.userId.profilePicture}`} />
+                      {post?.userId?.profilePicture && (
+                        <img
+                          src={`${BASE_URL}/${post.userId.profilePicture}`}
+                        />
+                      )}
                       <div className={styles.postUserInfo}>
                         <div>
                           <h3 style={{ margin: "0" }}>{post.userId.name}</h3>
