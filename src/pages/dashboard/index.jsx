@@ -79,7 +79,9 @@ const Dashboard = () => {
   if (!authState.user) {
     return (
       <DashboardLayout>
-        <div>Loading...</div>
+       <div style={{display: "flex", justifyContent: "center", marginTop: "5rem", alignItems: "center"}}>
+          <div className={styles.spinner}></div>
+        </div>
       </DashboardLayout>
     );
   } else {

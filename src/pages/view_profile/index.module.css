@@ -5,7 +5,6 @@
   background-color: white;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
   border-radius: 1rem;
-  margin-inline: 0.5rem;
 }
 
 .header {
@@ -125,7 +124,7 @@
   margin-top: 0.75rem;
 }
 
-.connection > p {
+.connection  {
   padding: 0.5rem 1rem;
   background-color: #f3f4f6;
   width: fit-content;
@@ -133,6 +132,7 @@
   background-color: #007bff;
   color: white;
   font-size: 0.85rem;
+  cursor: pointer;
 }
 
 .downloadIcon > svg {
@@ -153,6 +153,22 @@
   border-top: 1px solid #ccc;
 }
 
+.spinner {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 9px solid;
+  border-color: #dbdcef;
+  border-right-color: #007bff;
+  animation: spinner-d3wgkg 1s infinite linear;
+}
+
+@keyframes spinner-d3wgkg {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
 @media (max-width: 600px) {
   .profileDetails {
     flex-direction: column;
@@ -165,5 +181,8 @@
   }
   .recentActivityList {
     height: 100%;
+  }
+  .container {
+    margin-inline: 0.5rem;
   }
 }

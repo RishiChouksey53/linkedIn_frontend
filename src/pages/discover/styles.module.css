@@ -23,6 +23,9 @@
   margin: 10px auto;
   transition: transform 0.2s ease;
 }
+.userCard {
+  cursor: pointer;
+}
 .userCard:hover {
   transform: scale(1.01);
 }

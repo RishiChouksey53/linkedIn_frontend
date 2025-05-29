@@ -109,7 +109,7 @@ const DashboardLayout = ({ children }) => {
             <div className={styles.extraContainer}>
               <h3>Top Profiles</h3>
               {!authState.all_profiles_fetched ? (
-                <p>Loading...</p>
+                <div className={styles.topProfileLoader}></div>
               ) : (
                 <div style={{ marginTop: ".5rem" }}>
                   {authState.all_profiles.map((profile) => (
@@ -186,7 +186,9 @@ const DashboardLayout = ({ children }) => {
           </div>
         </>
       ) : (
-        <h2 style={{paddingTop: "2rem", textAlign: "center"}}>Loading...</h2>
+        <div style={{display: "flex", justifyContent: "center", marginTop: "5rem", alignItems: "center"}}>
+          <div className={styles.spinner}></div>
+        </div>
       )}
     </UserLayout>
   );
