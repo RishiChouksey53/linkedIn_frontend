@@ -2,6 +2,7 @@
   display: flex;
   max-width: 1200px;
   margin: 0 auto;
+  height: 90vh;
 }
 
 .container > div:nth-child(odd) {
@@ -12,6 +13,7 @@
 .container > div:nth-child(even) {
   flex: 0.6;
 }
+
 
 .homeContainer_left {
   display: flex;
@@ -76,6 +78,7 @@
   .container {
     flex-direction: column;
     overflow-x: hidden;
+      height: 92vh;
   }
   .feedContainer {
     padding: 0;
