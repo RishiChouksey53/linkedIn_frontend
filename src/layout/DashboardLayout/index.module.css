@@ -2,7 +2,7 @@
   display: flex;
   max-width: 1200px;
   margin: 0 auto;
-  /* height: 90vh; */
+  height: 100vh;
 }
 
 .container > div:nth-child(odd) {
@@ -62,7 +62,7 @@
   justify-content: space-around;
   align-items: center;
   padding-inline: 0.5rem;
-  padding-block: .5rem;
+  padding-block: 1rem;
   display: none;
 }
 
@@ -79,7 +79,7 @@
   .container {
     flex-direction: column;
     overflow-x: hidden;
-      height: 91vh;
+      height: 95vh;
   }
   .feedContainer {
     padding: 0;
