@@ -49,7 +49,7 @@
 }
 
 .mobileNavBar {
-  position:fixed;
+  position: fixed;
   bottom: 0;
   z-index: 5;
   width: 100%;
@@ -57,9 +57,9 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-inline: .5rem;
+  padding-inline: 0.5rem;
   padding-top: 1rem;
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
   display: none;
 }
 
@@ -86,5 +86,22 @@
   .homeContainer_left {
     display: none;
   }
+}
 
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: fit-content;
+  font-weight: bold;
+  font-family: monospace;
+  font-size: 30px;
+  clip-path: inset(0 3ch 0 0);
+  animation: l4 1s steps(4) infinite;
+}
+.loader:before {
+  content: "Loading...";
+}
+@keyframes l4 {
+  to {
+    clip-path: inset(0 -1ch 0 0);
+  }
 }
