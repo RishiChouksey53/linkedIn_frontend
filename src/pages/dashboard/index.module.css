@@ -4,7 +4,7 @@
   width: 100%;
   margin-top: 1rem;
   overflow-y: auto;
-  height: 90vh;
+
 }
 .createPostContainer {
   width: 100%;
@@ -266,6 +266,11 @@
   }
   .allCommentsContainer {
     margin: 0.5rem;
+  }
+  .container {
+      height: 85vh;
+      overflow-y: auto;
+
   }
 }
 

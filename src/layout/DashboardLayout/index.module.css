@@ -62,8 +62,7 @@
   justify-content: space-around;
   align-items: center;
   padding-inline: 0.5rem;
-  padding-top: 1rem;
-  padding-bottom: 2rem;
+  padding-block: 1rem;
   display: none;
 }
 
@@ -79,7 +78,7 @@
   .container {
     flex-direction: column;
     overflow-x: hidden;
-    height: 95vh;
+    max-height: 92vh;
   }
   .feedContainer {
     padding: 0;

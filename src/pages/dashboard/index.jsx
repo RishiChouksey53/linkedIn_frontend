@@ -43,7 +43,7 @@ const Dashboard = () => {
       dispatch(getAllPosts());
       dispatch(getAboutUser({ token: localStorage.getItem("token") }));
     }
-  }, [authState.isTokenThere]);
+  }, [authState.isTokenThere, authState.user]);
 
   const handleUpload = async () => {
     await dispatch(
@@ -79,7 +79,14 @@ const Dashboard = () => {
   if (!authState.user) {
     return (
       <DashboardLayout>
-       <div style={{display: "flex", justifyContent: "center", marginTop: "5rem", alignItems: "center"}}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "5rem",
+            alignItems: "center",
+          }}
+        >
           <div className={styles.spinner}></div>
         </div>
       </DashboardLayout>
