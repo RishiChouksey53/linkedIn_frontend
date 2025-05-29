@@ -56,13 +56,14 @@
   width: 100%;
   left: 0;
   right: 0;
-  top: 91%;
+  bottom: 0;
   background-color: whitesmoke;
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding-inline: 0.5rem;
-  padding-block: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
   display: none;
 }
 
@@ -78,7 +79,7 @@
   .container {
     flex-direction: column;
     overflow-x: hidden;
-    height: 90vh;
+    height: 95vh;
   }
   .feedContainer {
     padding: 0;
