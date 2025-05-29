@@ -8,11 +8,11 @@ const Navbar = () => {
   const router = useRouter();
   const authState = useSelector((state) => state.auth);
   const dispatch = useDispatch();
-  useEffect(() => {
-    if (!authState.profileFetced) {
-      dispatch(getAboutUser());
-    }
-  });
+  // useEffect(() => {
+  //   if (!authState.user) {
+  //     dispatch(getAboutUser());
+  //   }
+  // }, []);
   return (
     <>
       <div className={styles.container}>

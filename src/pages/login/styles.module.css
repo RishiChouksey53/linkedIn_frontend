@@ -6,10 +6,9 @@
 }
 
 .cardContainer {
-  min-height: 25rem;
+  height: 25rem;
   display: flex;
   border-radius: 10px;
-  width: 80vw;
   overflow: hidden;
   background-color: white;
   box-shadow: 5px 5px 10px rgba(173, 173, 173);

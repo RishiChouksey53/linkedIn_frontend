@@ -7,4 +7,14 @@
 }
 body {
   margin: 0 auto;
+  transform: scale(1.125);
+  overflow-x: hidden;
+    transform-origin: top center;
+  
+}
+
+@media (max-width:1350px){
+ body {
+  transform: scale(1);
+ }
 }

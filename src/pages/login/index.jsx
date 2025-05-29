@@ -23,10 +23,13 @@ const Login = () => {
   }, [authState.isLoggedIn]);
 
   useEffect(() => {
+    dispatch(emptyMessage());
+  }, []);
+  useEffect(() => {
     if (localStorage.getItem("token")) {
       router.push("/dashboard");
     }
-  });
+  }, []);
 
   useEffect(() => {
     dispatch(emptyMessage());
