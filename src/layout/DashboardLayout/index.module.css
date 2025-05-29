@@ -79,30 +79,18 @@
   .container {
     flex-direction: column;
     overflow-x: hidden;
-    /* Reduce height to account for mobileNavBar height */
-    height: calc(100vh - 60px); /* assuming mobileNavBar is ~60px tall */
+      height: 92vh;
   }
   .feedContainer {
     padding: 0;
-    /* add bottom padding so content doesn't get hidden behind nav */
-    padding-bottom: 60px; /* same as nav bar height */
-    overflow-y: auto; /* allow scroll inside feedContainer only */
   }
   .mobileNavBar {
     display: flex;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 60px; /* fixed height */
-    background-color: whitesmoke;
-    z-index: 10;
   }
   .homeContainer_left {
     display: none;
   }
 }
-
 
 /* HTML: <div class="loader"></div> */
 .loader {
