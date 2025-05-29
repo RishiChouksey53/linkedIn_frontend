@@ -1,5 +1,5 @@
 import { BASE_URL, clientServer } from "@/config";
-import React, { use, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./index.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { getAllPosts } from "@/config/redux/action/postAction";
@@ -32,7 +32,7 @@ export default function ViewUserProfile({ userProfile }) {
 
   const filterUserPosts = () => {
     const filterPosts = postState.posts.filter(
-      (post) => post.userId._id == userProfile.userId._id
+      (post) => post.userId._id === userProfile.userId._id
     );
     setUserPosts(filterPosts);
   };
