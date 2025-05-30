@@ -58,12 +58,8 @@
   right: 0;
   bottom: 0;
   background-color: whitesmoke;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding-inline: 0.5rem;
-  padding-block: 1rem;
   display: none;
+  height: 4rem;
 }
 
 .singleNavItemHolder > svg {
@@ -78,13 +74,16 @@
   .container {
     flex-direction: column;
     overflow-x: hidden;
-    max-height: 92vh;
+    height: calc(98.5vh - 4rem);
   }
   .feedContainer {
     padding: 0;
   }
   .mobileNavBar {
     display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-inline: 0.5rem;
   }
   .homeContainer_left {
     display: none;

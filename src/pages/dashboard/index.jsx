@@ -31,21 +31,24 @@ const Dashboard = () => {
   const [fileContent, setFileContent] = useState("");
   const [commentText, setCommentText] = useState("");
   const [likingPosts, setLikingPosts] = useState([]);
+  const [isPosting, setIsPosting] = useState(false);
 
   useEffect(() => {
     if (!authState.all_profiles_fetched) {
       dispatch(getAllUsersProfile());
     }
-  }, []);
+  }, [authState.all_profiles_fetched]);
 
   useEffect(() => {
     if (authState.isTokenThere) {
-      dispatch(getAllPosts());
       dispatch(getAboutUser({ token: localStorage.getItem("token") }));
+      dispatch(getAllPosts());
     }
-  }, [authState.isTokenThere, authState.user]);
+  }, [authState.isTokenThere]);
 
   const handleUpload = async () => {
+    if (isPosting) return;
+    setIsPosting(true);
     await dispatch(
       createPost({
         token: localStorage.getItem("token"),
@@ -56,6 +59,7 @@ const Dashboard = () => {
     setFileContent("");
     setPostContent("");
     await dispatch(getAllPosts());
+    setIsPosting(false);
   };
 
   const handleDeletePost = async (postId) => {
@@ -133,7 +137,14 @@ const Dashboard = () => {
               id="fileUpload"
             />
             {postContent.length > 0 && (
-              <div onClick={handleUpload} className={styles.createPostButton}>
+              <div
+                onClick={handleUpload}
+                className={styles.createPostButton}
+                style={{
+                  pointerEvents: isPosting ? "none" : "auto",
+                  opacity: isPosting ? 0.8 : 1,
+                }}
+              >
                 Post
               </div>
             )}
@@ -158,7 +169,7 @@ const Dashboard = () => {
                     <div className={styles.postUser}>
                       {post?.userId?.profilePicture && (
                         <img
-                          src={`${BASE_URL}/${post.userId.profilePicture}`}
+                          src={`${BASE_URL}/${post?.userId?.profilePicture}`}
                         />
                       )}
                       <div className={styles.postUserInfo}>

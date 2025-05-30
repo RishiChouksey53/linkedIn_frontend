@@ -4,10 +4,11 @@
   width: 100%;
   margin-top: 1rem;
   overflow-y: auto;
-
+  justify-content: center;
+  align-items: center;
 }
 .createPostContainer {
-  width: 100%;
+  width: 90%;
   border-radius: 10px;
   display: flex;
   padding-block: 1rem;
@@ -17,6 +18,8 @@
   margin-bottom: 1.5rem;
   padding: 0.5rem;
   height: 10rem;
+  margin-inline: 0.5rem;
+  background-color: whitesmoke;
 }
 
 .createPostContainer > label > svg {
@@ -32,7 +35,6 @@
   padding: 0.8rem;
   border-radius: 10px;
   border: none;
-  background-color: #f0f0f0;
   font-size: 1rem;
   margin-inline: 0.5rem;
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -268,13 +270,12 @@
     margin: 0.5rem;
   }
   .container {
-      height: 85vh;
-      overflow-y: auto;
-
+    height: 85vh;
+    overflow-y: auto;
   }
 }
 
-.spinner { 
+.spinner {
   height: 2.5rem;
   width: 2.5rem;
   border-radius: 50%;

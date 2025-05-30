@@ -26,13 +26,26 @@ export default function Profile() {
   };
   useEffect(() => {
     const token = localStorage.getItem("token");
-    if (token) {
+    if (token && !authState.user) {
       dispatch(getAboutUser({ token: token }));
     }
-  },[]);
+  }, []);
 
   if (!authState.user) {
-    return <div style={{padding: "2rem"}}>Loading...</div>;
+    return (
+      <UserLayout>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginTop: "5rem",
+            alignItems: "center",
+          }}
+        >
+          <div className={styles.spinner}></div>
+        </div>
+      </UserLayout>
+    );
   } else {
     return (
       <UserLayout>

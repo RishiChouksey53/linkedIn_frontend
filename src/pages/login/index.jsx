@@ -4,7 +4,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
 import styles from "./styles.module.css";
 import { loginUser, registerUser } from "@/config/redux/action/authAction";
-import { emptyMessage } from "@/config/redux/reducer/authReducer";
+import { emptyMessage, setTokenIsThere } from "@/config/redux/reducer/authReducer";
+
 
 const Login = () => {
   const router = useRouter();
@@ -25,11 +26,13 @@ const Login = () => {
   useEffect(() => {
     dispatch(emptyMessage());
   }, []);
-  // useEffect(() => {
-  //   if (localStorage.getItem("token")) {
-  //     router.push("/dashboard");
-  //   }
-  // }, []);
+
+  useEffect(() => {
+    if (localStorage.getItem("token")) {
+      router.push("/dashboard");
+      dispatch(setTokenIsThere());
+    }
+  }, []);
 
   useEffect(() => {
     dispatch(emptyMessage());
