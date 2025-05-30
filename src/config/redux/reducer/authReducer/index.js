@@ -76,23 +76,11 @@ const authSlice = createSlice({
           (state.isError = true),
           (state.message = action?.payload?.message || "Registering failed");
       })
-      .addCase(getAboutUser.pending, (state) => {
-        (state.isLoading = true), (state.message = "Fetching user...");
-      })
       .addCase(getAboutUser.fulfilled, (state, action) => {
         (state.isLoading = false),
           (state.isError = false),
           (state.profileFetced = true),
           (state.user = action.payload.userProfile);
-      })
-      .addCase(getAboutUser.rejected, (state, action) => {
-        (state.isLoading = false),
-          (state.isSuccess = false),
-          (state.isError = true),
-          (state.message = action?.payload?.message || "Fetching user failed");
-      })
-      .addCase(getAllUsersProfile.pending, (state) => {
-        (state.isLoading = true), (state.message = "Fetching users...");
       })
       .addCase(getAllUsersProfile.fulfilled, (state, action) => {
         (state.isLoading = false),
@@ -100,24 +88,12 @@ const authSlice = createSlice({
           (state.all_profiles_fetched = true),
           (state.all_profiles = action.payload.data);
       })
-      .addCase(getAllUsersProfile.rejected, (state, action) => {
-        (state.isLoading = false),
-          (state.isSuccess = false),
-          (state.isError = true),
-          (state.message = action?.payload?.message || "Fetching users failed");
-      })
       //whome i have send me -> others
       .addCase(getConnectionRequestsSend.fulfilled, (state, action) => {
         state.connections = action.payload;
       })
-      .addCase(getConnectionRequestsSend.rejected, (state, action) => {
-        state.message = action?.payload || "No Connection Requests";
-      })
       .addCase(getConnectionRequestsReceived.fulfilled, (state, action) => {
         state.connectionRequest = action.payload;
-      })
-      .addCase(getConnectionRequestsReceived.rejected, (state, action) => {
-        state.message = action?.payload || "No Connection Requests";
       });
   },
 });

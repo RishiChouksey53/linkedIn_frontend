@@ -4,8 +4,10 @@ import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
 import styles from "./styles.module.css";
 import { loginUser, registerUser } from "@/config/redux/action/authAction";
-import { emptyMessage, setTokenIsThere } from "@/config/redux/reducer/authReducer";
-
+import {
+  emptyMessage,
+  setTokenIsThere,
+} from "@/config/redux/reducer/authReducer";
 
 const Login = () => {
   const router = useRouter();

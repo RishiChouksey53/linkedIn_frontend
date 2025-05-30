@@ -13,6 +13,11 @@ const Navbar = () => {
       dispatch(getAboutUser());
     }
   }, []);
+  useEffect(() => {
+    if (!authState.user) {
+      dispatch(getAboutUser());
+    }
+  }, [authState.isTokenThere]);
   return (
     <>
       <div className={styles.container}>
