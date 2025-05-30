@@ -25,7 +25,7 @@ export default function Discover() {
 
   useEffect(() => {
     dispatch(getAboutUser());
-  }, []);
+  }, [authState.isTokenThere]);
 
   useEffect(() => {
     const filter = () => {
