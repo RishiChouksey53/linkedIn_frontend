@@ -71,7 +71,10 @@ const Login = () => {
               {isLoggedMethod ? "Sign In" : "Sign Up"}
             </p>
             {authState.message && (
-              <p style={{ color: authState.isError ? "red" : "green" }}>
+              <p
+                className={styles.blinking}
+                style={{ color: authState.isError ? "red" : "green" }}
+              >
                 {authState.message}
               </p>
             )}
