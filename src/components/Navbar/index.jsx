@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 import { useRouter } from "next/router";
 import { useDispatch, useSelector } from "react-redux";
 import { getAboutUser } from "@/config/redux/action/authAction";
-import { reset } from "@/config/redux/reducer/authReducer";
+import { reset, setTokenIsNotThere } from "@/config/redux/reducer/authReducer";
 const Navbar = () => {
   const router = useRouter();
   const authState = useSelector((state) => state.auth);
@@ -44,9 +44,10 @@ const Navbar = () => {
                 </p>
                 <div
                   onClick={() => {
-                    localStorage.removeItem("token");
-                    dispatch(reset());
                     router.push("/");
+                    localStorage.removeItem("token");
+                    dispatch(setTokenIsNotThere());
+                    dispatch(reset());
                   }}
                   className={styles.LogoutBtn}
                 >
