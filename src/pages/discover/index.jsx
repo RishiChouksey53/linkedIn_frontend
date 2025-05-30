@@ -24,6 +24,10 @@ export default function Discover() {
   }, []);
 
   useEffect(() => {
+    dispatch(getAboutUser());
+  }, []);
+
+  useEffect(() => {
     const filter = () => {
       if (!authState.all_profiles) return;
       const result = authState.all_profiles.filter(

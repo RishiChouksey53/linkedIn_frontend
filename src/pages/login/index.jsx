@@ -36,7 +36,6 @@ const Login = () => {
   useEffect(() => {
     if (localStorage.getItem("token")) {
       router.push("/dashboard");
-      dispatch(getAboutUser());
       dispatch(setTokenIsThere());
     }
   }, []);
