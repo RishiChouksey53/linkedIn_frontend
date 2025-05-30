@@ -3,7 +3,11 @@ import React, { use, useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useRouter } from "next/router";
 import styles from "./styles.module.css";
-import { loginUser, registerUser } from "@/config/redux/action/authAction";
+import {
+  getAboutUser,
+  loginUser,
+  registerUser,
+} from "@/config/redux/action/authAction";
 import {
   emptyMessage,
   setTokenIsThere,
@@ -32,6 +36,7 @@ const Login = () => {
   useEffect(() => {
     if (localStorage.getItem("token")) {
       router.push("/dashboard");
+      dispatch(getAboutUser());
       dispatch(setTokenIsThere());
     }
   }, []);
