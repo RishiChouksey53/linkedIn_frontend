@@ -9,12 +9,7 @@ const Navbar = () => {
   const authState = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   useEffect(() => {
-    if (!authState.user) {
-      dispatch(getAboutUser());
-    }
-  }, []);
-  useEffect(() => {
-    if (!authState.user) {
+    if (!authState.user && authState.isTokenThere) {
       dispatch(getAboutUser());
     }
   }, [authState.isTokenThere]);

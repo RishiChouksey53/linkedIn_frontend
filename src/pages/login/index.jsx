@@ -26,6 +26,7 @@ const Login = () => {
   useEffect(() => {
     if (authState.isLoggedIn) {
       router.push("/dashboard");
+      dispatch(setTokenIsThere());
     }
   }, [authState.isLoggedIn]);
 
@@ -33,12 +34,12 @@ const Login = () => {
     dispatch(emptyMessage());
   }, []);
 
-  useEffect(() => {
-    if (localStorage.getItem("token")) {
-      router.push("/dashboard");
-      dispatch(setTokenIsThere());
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (localStorage.getItem("token")) {
+  //     router.push("/dashboard");
+  //     dispatch(setTokenIsThere());
+  //   }
+  // }, []);
 
   useEffect(() => {
     dispatch(emptyMessage());
