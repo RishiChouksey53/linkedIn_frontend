@@ -74,7 +74,7 @@
   .container {
     flex-direction: column;
     overflow-x: hidden;
-    height: 100dvh;
+    height: calc(98.5vh - 4rem);
   }
   .feedContainer {
     padding: 0;
