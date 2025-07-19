@@ -270,7 +270,7 @@
     margin: 0.5rem;
   }
   .container {
-    height: 85vh;
+    height: 85dvh;
     overflow-y: auto;
   }
 }
